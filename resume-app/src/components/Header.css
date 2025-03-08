@@ -1,0 +1,170 @@
+.header {
+  background-color: #fff5d1; /* Changed to a warmer pale yellow to match the body background */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #3498db; /* Changed logo color to match navigation */
+  text-decoration: none;
+  letter-spacing: -0.6px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.logo a:before {
+  content: '📝';
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.logo a:hover {
+  color: #2980b9; /* Darker on hover */
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  color: #3498db; /* Changed to blue color by default (without hover) */
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #2980b9; /* Darker blue on hover */
+}
+
+.nav a.active {
+  color: #2980b9; /* Darker blue for active state */
+  font-weight: 700;
+}
+
+.nav a:after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover:after, 
+.nav a.active:after {
+  width: 100%;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .nav {
+    gap: 1.5rem;
+  }
+  
+  .logo a {
+    font-size: 1.5rem;
+  }
+  
+  .logo a:before {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff; /* Changed from #545454 to match the header */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    opacity: 0;
+  }
+  
+  .nav.active {
+    max-height: 300px;
+    opacity: 1;
+  }
+  
+  .nav a {
+    padding: 1rem 2rem;
+    width: 100%;
+    color: #666; /* Changed from #232323 to a grey color */
+    text-align: center;
+  }
+  
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

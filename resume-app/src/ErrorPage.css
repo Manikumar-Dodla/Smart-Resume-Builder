@@ -1,0 +1,141 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--light-bg);
+}
+
+.error-page h1 {
+  font-size: 6rem;
+  margin: 0;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.error-page h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+  color: var(--text-color);
+}
+
+.error-page p {
+  margin-bottom: 2rem;
+  color: #6b7280;
+  max-width: 500px;
+}
+
+.error-page button {
+  padding: 0.8rem 1.5rem;
+}
+
+.error-container {
+  max-width: 500px;
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.error-container h1 {
+  color: var(--error-color);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin: 0;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.error-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+.error-message {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  font-family: monospace;
+  background-color: #f0f7ff; /* Light blue background */
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--error-color);
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.error-action {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.error-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.error-button:hover {
+  background-color: #1d4ed8;
+}
+
+.error-link {
+  padding: 0.8rem 1.5rem;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.error-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .error-code {
+    font-size: 6rem;
+  }
+  
+  .error-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Added styles for error actions */
+.error-actions {
+  margin-top: 2rem;
+}
+
+.error-actions .btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.error-actions .btn:hover {
+  background-color: var(--secondary-color);
+}

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "katex": "^0.16.21",
+    "pdfjs-dist": "^4.10.38",
+    "react-latex": "^1.2.0",
+    "react-pdf": "^9.2.1"
+  }
+}
